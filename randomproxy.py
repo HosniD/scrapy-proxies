@@ -26,11 +26,10 @@ from scrapy import log
 class RandomProxy(object):
     def __init__(self, settings):
         self.proxy_list = settings.get('PROXY_LIST')
-        fin = open(self.proxy_list)
 
         self.proxies = {}
-        for line in fin.readlines():
-            parts = re.match('(\w+://)(\w+:\w+@)?(.+)', line)
+        for proxy in self.proxy_list:
+            parts = re.match('(\w+://)(\w+:\w+@)?(.+)', proxy)
             if not parts:
                 continue
 
