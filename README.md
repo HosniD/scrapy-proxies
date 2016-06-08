@@ -27,7 +27,7 @@ settings.py
     # http://username:password@host2:port
     # http://host3:port
     # ...
-    PROXY_LIST = '/path/to/proxy/list.txt'
+    PROXY_LIST = ['proxy1','proxy2']
 
 
 Your spider
