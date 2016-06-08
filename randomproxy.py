@@ -41,8 +41,6 @@ class RandomProxy(object):
 
             self.proxies[parts.group(1) + parts.group(3)] = user_pass
 
-        fin.close()
-
     @classmethod
     def from_crawler(cls, crawler):
         return cls(crawler.settings)
